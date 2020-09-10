@@ -1,0 +1,92 @@
+/* 
+use font-family rules: first learn to use the @font-face attr 
+
+Internet Explorer 9, Firefox, Opera,Chrome, 和 Safari支持@font-face 规则.
+但是, Internet Explorer 9 只支持 .eot 类型的字体, Firefox, Chrome, Safari, 
+和 Opera 支持 .ttf 与.otf 两种类型字体.
+注意： Internet Explorer 8 及更早IE版本不支持@font-face 规则
+
+
+@font-face规则，网页设计师再也不必使用的"web-safe"的字体之一。
+字体的名称，font-face规则：
+font-family: myFirstFont;
+字体文件包含在您的服务器上的某个地方，参考CSS：
+src: url('Sansation_Light.ttf')
+如果字体文件是在不同的位置，请使用完整的URL：
+src: url('http://www.w3cschool.css/css3/Sansation_Light.ttf')
+
+format：字体的格式，主要用于浏览器识别，一般有以下几种:
+truetype、opentype、truetype-aat、embedded-opentype、svg等。
+
+@font-face使用教程链接地址：https://www.cnblogs.com/hellman/p/6773461.html
+*/
+
+/* 
+ raleway font-family resource website address link: https://www.theleagueofmoveabletype.com/
+*/
+
+/* raleway font-family */
+@font-face {
+  font-family: 'raleway';
+  /* IE9 Compat Modes */
+  src: url('../fonts/raleway/webfonts/raleway_thin-webfont.eot');
+  /* IE6-IE8 */
+  src: url('../fonts/raleway/webfonts/raleway_thin-webfont.eot') format('embedded-opentype'),
+    /* Modern Browsers */
+    url('../fonts/raleway/webfonts/raleway_thin-webfont.woff') format('woff'),
+    /* Safari, Android, iOS */
+    url('../fonts/raleway/webfonts/raleway_thin-webfont.ttf') format('truetype'),
+    /* Legacy iOS */
+    url('../fonts/raleway/webfonts/raleway_thin-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* leagueMono font-family */
+@font-face {
+  font-family: 'leagueMono';
+  /* IE9 Compat Modes */
+  src: url('../fonts/leagueMono/webfonts/LeagueMono-Bold.eot');
+  /* IE6-IE8 */
+  src: url('../fonts/leagueMono/webfonts/LeagueMono-Bold.eot') format('embedded-opentype'),
+    /* Modern Browsers */
+    url('../fonts/leagueMono/webfonts/LeagueMono-Bold.woff') format('woff'),
+    /* Safari, Android, iOS */
+    url('../fonts/leagueMono/ttf/LeagueMono-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* leagueScript font-family */
+@font-face {
+  font-family: 'leagueScript';
+  /* IE9 Compat Modes */
+  src: url('../fonts/leagueScript/webfonts/LeagueScriptNumberOne-webfont.eot');
+  /* IE6-IE8 */
+  src: url('../fonts/leagueScript/webfonts/LeagueScriptNumberOne-webfont.eot') format('embedded-opentype'),
+    /* Modern Browsers */
+    url('../fonts/leagueScript/webfonts/LeagueScriptNumberOne-webfont.woff') format('woff'),
+    /* Safari, Android, iOS */
+    url('../fonts/leagueScript/webfonts/LeagueScriptNumberOne-webfont.ttf') format('truetype'),
+    /* Legacy iOS */
+    url('../fonts/leagueScript/webfonts/LeagueScriptNumberOne-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ 使用示范：
+ 
+ p{
+	 font-family: raleway;
+ }
+
+span{
+  font-family: leagueMono;
+}
+
+a{
+  font-family: leagueScript;
+}
+
+ */
